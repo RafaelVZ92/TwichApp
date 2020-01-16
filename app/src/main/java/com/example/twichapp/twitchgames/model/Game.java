@@ -1,5 +1,5 @@
 
-package com.example.twichapp.model;
+package com.example.twichapp.twitchgames.model;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
