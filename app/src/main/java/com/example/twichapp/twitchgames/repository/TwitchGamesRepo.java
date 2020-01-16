@@ -42,6 +42,10 @@ public class TwitchGamesRepo implements Repository {
                 }).doOnNext(new Consumer<Game>() {
                     @Override
                     public void accept(Game result) {
+                        int index = result.getBoxArtUrl().indexOf("{");
+                        String mod = result.getBoxArtUrl().substring(0, index);
+                        String url = mod+"200x250.jpg";
+                        result.setBoxArtUrl(url);
                         topGames.add(result);
                     }
                 });
